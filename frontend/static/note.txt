@@ -1,0 +1,3 @@
+Start the Tailwind CLI build process:
+
+npx @tailwindcss/cli -i ./frontend/static/assets/styles/input.css -o ./frontend/static/assets/styles/output.css --watch
