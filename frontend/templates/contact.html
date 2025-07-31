@@ -5,6 +5,38 @@
 {% endblock %}
 
 {% block content %}
-<h1 class="text-4xl text-center mt-10 mb-4 font-bold ">For inquiries, please email:</h1>
-<h1 class="text-4xl text-center font-bold ">palestineinnorthfield@gmail.com</h1>
+{% if messages %}
+  {% for message in messages %}
+    <h1 class="text-success text-2xl lg:text-4xl text-center mt-8 mb-0 font-bold">{{ message }}</h1>
+  {% endfor %}
+{% endif %}
+<h1 class="text-2xl lg:text-4xl text-center mt-8 mb-4 font-bold">For inquiries, please email:</h1>
+<h1 onclick="navigator.clipboard.writeText('palestineinnorthfield@gmail.com')" class="underline text-success hover:cursor-pointer hover:text-green-900 text-xl lg:text-2xl text-center font-bold mb-4 mx-4">palestineinnorthfield@gmail.com</h1>
+<h1 class="text-2xl lg:text-4xl text-center font-bold">Or contact us here:</h1>
+<!-- The form to send us a message -->
+<div class="w-95/100 lg:w-3/4 mx-auto mb-20 p-4">
+  <form method="POST" class="bg-green-900 shadow-2xl rounded-xl p-8">
+    {% csrf_token %}
+    <div class="space-y-10">
+      {% for field in form %}
+        {% if field.errors %}
+          <div class="text-red-400 text-md m-0">
+            {% for error in field.errors %}
+              <p>{{ error }}</p>
+            {% endfor %}
+          </div>
+        {% endif %}
+        <label for="{{ field.id_for_label }}" class="text-white font-bold mb-4 text-lg">{{ field.label }}</label>
+        {% if field.name == 'message' %}
+          <textarea name="{{ field.name }}" class="w-full mt-2 p-4 rounded-xl border-2 border-green-700 bg-white text-gray-800 placeholder-gray-600" placeholder="Enter your message here..."></textarea>
+        {% else %}
+          <input name="{{ field.name }}"  class="w-full mt-2 p-4 rounded-xl border-2 border-green-700 bg-white text-gray-800 placeholder-gray-600" placeholder="..."/>
+        {% endif %}
+      {% endfor %}
+    </div>
+    <div class="mt-8 text-center">
+      <button type="submit" class="bg-white text-green-800 font-bold py-4 px-8 rounded-xl hover:cursor-pointer hover:scale-110 text-lg">Send Message</button>
+    </div>
+  </form>
+</div>
 {% endblock %}
