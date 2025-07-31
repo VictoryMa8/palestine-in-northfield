@@ -19,6 +19,8 @@ DEBUG = os.getenv('DEBUG')
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'palestine-in-northfield.fly.dev', 'palestineinnorthfield.org', 'www.palestineinnorthfield.org']
 
+CSRF_TRUSTED_ORIGINS = ['https://palestine-in-northfield.fly.dev', 'https://palestineinnorthfield.org', 'https://www.palestineinnorthfield.org']
+
 # Application definition
 
 INSTALLED_APPS = [
