@@ -1,3 +1,16 @@
 Start the Tailwind CLI build process:
 
 npx @tailwindcss/cli -i ./frontend/static/assets/styles/input.css -o ./frontend/static/assets/styles/output.css --watch
+
+<img src="{% static 'assets/images/image1.JPG' %}" class="rounded-box max-h-100"/>
+<img src="{% static 'assets/images/palestine2.JPG' %}" class="rounded-box max-h-120"/>
+<img src="{% static 'assets/images/palestine1.JPG' %}" class="rounded-box max-h-120"/>
+<img src="{% static 'assets/images/image2.jpeg' %}" class="rounded-box max-h-100"/>
+<img src="{% static 'assets/images/image3.jpeg' %}" class="rounded-box max-h-100"/>
+<img src="{% static 'assets/images/image4.jpeg' %}" class="rounded-box max-h-90"/>
+<img src="{% static 'assets/images/image5.jpeg' %}" class="rounded-box max-h-100"/>
+<img src="{% static 'assets/images/image6.jpeg' %}" class="rounded-box max-h-100"/>
+<img src="{% static 'assets/images/image7.jpeg' %}" class="rounded-box max-h-100"/>
+<img src="{% static 'assets/images/image8.jpeg' %}" class="rounded-box max-h-100"/>
+<img src="{% static 'assets/images/image9.jpeg' %}" class="rounded-box max-h-100"/>
+<img src="{% static 'assets/images/image10.jpg' %}" class="rounded-box max-h-100"/>
