@@ -3,10 +3,12 @@ from django.core.mail import send_mail
 from django.contrib import messages
 from django.conf import settings
 from .forms import ContactForm
+from .models import Post
 
 # Create your views here.
 def index(request):
-    return render(request, 'index.html')
+    posts = Post.objects.all()
+    return render(request, 'index.html', {'posts': posts})
 
 def about(request):
     return render(request, 'about.html')
@@ -48,4 +50,3 @@ def contact(request):
 
 def resources(request):
     return render(request, 'resources.html')
-

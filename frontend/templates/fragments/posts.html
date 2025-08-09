@@ -1,0 +1,11 @@
+{% if posts %}
+    {% for post in posts %}
+        <div>
+            <p class="text-3xl mb-2">{{ post.title }}</p>
+            <p class="text-xl mb-4">{{ post.description }}</p>
+            <img class="rounded-lg" src="{{ post.image }}">
+        </div>
+    {% endfor %}
+{% else %}
+    <p>No posts available...</p>
+{% endif %}

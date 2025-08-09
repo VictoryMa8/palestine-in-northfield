@@ -107,19 +107,19 @@ USE_I18N = True
 
 USE_TZ = True
 
-STATIC_URL = 'frontend/static/'
-
-STATIC_ROOT = BASE_DIR / 'staticfiles'
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = 'frontend/static/'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+MEDIA_URL = 'uploads/'
+MEDIA_ROOT = BASE_DIR / 'frontend/static/uploads/'
 
 LOGIN_REDIRECT_URL = "/"
 LOGOUT_REDIRECT_URL = "/"
 
-# Email stuff...
+# Email contact form
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
