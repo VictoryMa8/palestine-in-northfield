@@ -10,11 +10,11 @@
     <h1 class="text-success text-2xl lg:text-4xl text-center mb-0 pt-25 font-bold">{{ message }}</h1>
   {% endfor %}
 {% else %}
-<h1 class="text-2xl lg:text-4xl text-center mb-4 pt-25 font-bold">For inquiries, please email:</h1>
-<h1 onclick="navigator.clipboard.writeText('palestineinnorthfield@gmail.com')" class="underline text-success hover:cursor-pointer hover:text-green-900 text-xl lg:text-2xl text-center font-bold mb-4 mx-4">palestineinnorthfield@gmail.com</h1>
-<h1 class="text-2xl lg:text-4xl text-center font-bold">Or contact us here:</h1>
+<h1 class="text-2xl lg:text-4xl text-center pt-25 font-bold">For inquiries, please email:</h1>
+<h1 onclick="navigator.clipboard.writeText('palestineinnorthfield@gmail.com')" class="text-green-700 hover:cursor-pointer hover:text-green-500 text-xl lg:text-4xl text-center font-bold">palestineinnorthfield@gmail.com</h1>
+<h1 class="text-xl lg:text-4xl mt-4 text-center font-bold">Or contact us here:</h1>
 <!-- The form to send us a message -->
-<div class="w-95/100 lg:w-3/4 mx-auto mb-20 p-4">
+<div class="w-95/100 lg:w-2/4 mx-auto mb-20 p-4">
   <form method="POST" class="bg-green-900 shadow-2xl rounded-xl p-8">
     {% csrf_token %}
     <div class="space-y-10">
