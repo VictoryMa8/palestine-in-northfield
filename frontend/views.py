@@ -44,7 +44,7 @@ def contact(request):
                 return redirect('contact')
             except Exception as e:
                 print(f"Contact form error: {e}")
-                messages.error(request, 'There was an error sending your message. Please try again later.')
+                messages.error(request, f'There was an error sending your message: {str(e)}')
     # On initial page load, give the form
     else:
         form = ContactForm()
