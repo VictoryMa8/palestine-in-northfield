@@ -4,6 +4,7 @@ from django.contrib import messages
 from django.conf import settings
 from .forms import ContactForm
 from .models import Post
+import os
 
 # Create your views here.
 def index(request):
@@ -42,7 +43,8 @@ def contact(request):
                 messages.success(request, 'Thank you for your message. We will reach out when possible.')
                 return redirect('contact')
             except Exception as e:
-                messages.error(request, 'There was an error sending your message. Please try again.')
+                print(f"Contact form error: {e}")
+                messages.error(request, 'There was an error sending your message. Please try again later.')
     # On initial page load, give the form
     else:
         form = ContactForm()
