@@ -9,7 +9,6 @@
 <div class="lg:flex lg:flex-row pt-20">
   <div class="hidden md:block fixed right-5 top-30 p-4 rounded-lg h-3/4 w-2/9 bg-green-900">
     <h2 class="text-2xl text-center font-bold text-white">TAKE ACTION NOW</h2>
-    <a target="_blank" class="font-bold block text-center mt-4 rounded-lg p-4 bg-gray-900 hover:bg-gray-700 text-white" href="https://www.thebutterflyeffectproject.org/verified-campaigns2">BUTTERFLY EFFECT PROJECT: VERIFIED GAZAWI FUNDRAISERS</a>
     <a target="_blank" class="font-bold block text-center mt-4 rounded-lg p-4 bg-gray-900 hover:bg-gray-700 text-white" href="https://www.senate.gov/senators/senators-contact.htm">CONTACT YOUR SENATOR</a>
     <a target="_blank" class="font-bold block text-center mt-4 rounded-lg p-4 bg-gray-900 hover:bg-gray-700 text-white" href="https://www.house.gov/representatives/find-your-representative">CONTACT YOUR REPRESENTATIVE</a>
     <a target="_blank" class="font-bold block text-center mt-4 rounded-lg p-4 bg-gray-900 hover:bg-gray-700 text-white" href="https://bdsmovement.net/Guide-to-BDS-Boycott">BOYCOTT GUIDE</a>
@@ -22,11 +21,10 @@
       <img class="max-w-20 mx-auto mt-4" src="{% static 'assets/images/arrow.svg' %}">
       <button class="btn btn-xl bg-green-900 hover:bg-green-700 text-white" onclick="modal_1.showModal()">TAKE ACTION NOW</button>
     </div>
-    <button class="mt-2 btn btn-xl bg-green-900 hover:bg-green-700 text-white" onclick="modal_2.showModal()">LOCAL EVENTS</button>
+    <button class="mt-2 btn btn-xl bg-green-900 hover:bg-green-700 text-white" onclick="modal_2.showModal()">UPCOMING EVENTS</button>
     <dialog id="modal_1" class="modal modal-middle">
       <div class="modal-box h-150">
         <h2 class="text-lg text-center font-bold">TAKE ACTION NOW</h2>
-        <a target="_blank" class="font-bold block text-center mt-4 rounded-lg p-4 bg-green-900 hover:bg-green-700 text-white" href="https://www.thebutterflyeffectproject.org/verified-campaigns2">BUTTERFLY EFFECT PROJECT: VERIFIED GAZAWI FUNDRAISERS</a>
         <a target="_blank" class="font-bold block text-center mt-4 rounded-lg p-4 bg-green-900 hover:bg-green-700 text-white" href="https://www.senate.gov/senators/senators-contact.htm">CONTACT YOUR SENATOR</a>
         <a target="_blank" class="font-bold block text-center mt-4 rounded-lg p-4 bg-green-900 hover:bg-green-700 text-white" href="https://www.house.gov/representatives/find-your-representative">CONTACT YOUR REPRESENTATIVE</a>
         <a target="_blank" class="font-bold block text-center mt-4 rounded-lg p-4 bg-green-900 hover:bg-green-700 text-white" href="https://bdsmovement.net/Guide-to-BDS-Boycott">BOYCOTT GUIDE</a>
@@ -41,9 +39,12 @@
     </dialog>
     <dialog id="modal_2" class="modal modal-middle">
       <div class="modal-box h-150">
-        <form method="dialog">
-          <button class="btn mb-4">Close</button>
-        </form>
+        <div class="flex flex-row gap-4">
+          <form method="dialog">
+            <button class="btn mb-4">Close</button>
+          </form>
+          <a href="{% url 'events' %}" class="btn bg-green-900 hover:bg-green-700 text-white">More Information</a>
+        </div>
         {% include 'fragments/posts.html' %}
         <div class="modal-action">
         </div>
@@ -52,17 +53,15 @@
     <h1 class="text-2xl text-center mt-8 px-4 md:mx-10">Palestine in Northfield (PIN) is a Northfield-based collective of individuals from diverse backgrounds, united by a shared commitment to justice for Palestine. Born out of an urgent need for agility and solidarity, PIN responds to the ongoing injustices faced by the Palestinian people.</h1>
     <img class="h-40 mt-8" src="{% static 'assets/images/palestine-flag.svg' %}">
     <div class="flex flex-wrap items-center justify-center mt-8 mx-4 gap-4">
+      <img src="{% static 'assets/images/aerial.jpg' %}" class="rounded-box max-h-120"/>
+      <img src="{% static 'assets/images/c10.jpg' %}" class="rounded-box max-h-120"/>
       <img src="{% static 'assets/images/palestine2.JPG' %}" class="rounded-box max-h-120"/>
       <img src="{% static 'assets/images/palestine1.JPG' %}" class="rounded-box max-h-120"/>
       <img src="{% static 'assets/images/palestine3.JPG' %}" class="rounded-box max-h-120"/>
       <img src="{% static 'assets/images/c7.jpg' %}" class="rounded-box max-h-120"/>
       <img src="{% static 'assets/images/c11.jpg' %}" class="rounded-box max-h-120"/>
       <img src="{% static 'assets/images/c12.jpg' %}" class="rounded-box max-h-120"/>
-      <img src="{% static 'assets/images/c13.jpg' %}" class="rounded-box max-h-120"/>
       <img src="{% static 'assets/images/c14.jpg' %}" class="rounded-box max-h-120"/>
-      <img src="{% static 'assets/images/c8.jpg' %}" class="rounded-box max-h-120"/>
-      <img src="{% static 'assets/images/c9.jpg' %}" class="rounded-box max-h-120"/>
-      <img src="{% static 'assets/images/c10.jpg' %}" class="rounded-box max-h-120"/>
       <img src="{% static 'assets/images/c15.jpg' %}" class="rounded-box max-h-120"/>
       <img src="{% static 'assets/images/c16.jpg' %}" class="rounded-box max-h-120"/>
       <img src="{% static 'assets/images/c17.jpg' %}" class="rounded-box max-h-120"/>

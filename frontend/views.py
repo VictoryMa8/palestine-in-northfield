@@ -8,8 +8,11 @@ import os
 
 # Create your views here.
 def index(request):
-    posts = Post.objects.all()
+    posts = Post.objects.all().order_by('uuid')
     return render(request, 'index.html', {'posts': posts})
+
+def events(request):
+    return render(request, 'events.html')
 
 def about(request):
     return render(request, 'about.html')
