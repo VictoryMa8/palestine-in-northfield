@@ -17,20 +17,23 @@
 <div class="w-95/100 lg:w-2/4 mx-auto mb-20 p-4">
   <form method="POST" class="bg-green-900 shadow-2xl rounded-xl p-8">
     {% csrf_token %}
+    <input type="text" name="website" value="" autocomplete="off" tabindex="-1" style="position:absolute;left:-9999px;opacity:0;height:0;width:0;" aria-hidden="true">
     <div class="space-y-10">
       {% for field in form %}
-        {% if field.errors %}
-          <div class="text-red-400 text-md m-0">
-            {% for error in field.errors %}
-              <p>{{ error }}</p>
-            {% endfor %}
-          </div>
-        {% endif %}
-        <label for="{{ field.id_for_label }}" class="text-white font-bold mb-4 text-lg">{{ field.label }}</label>
-        {% if field.name == 'message' %}
-          <textarea name="{{ field.name }}" class="w-full mt-2 p-4 rounded-xl border-2 border-green-700 bg-white text-gray-800 placeholder-gray-600" placeholder="Enter your message here..."></textarea>
-        {% else %}
-          <input name="{{ field.name }}"  class="w-full mt-2 p-4 rounded-xl border-2 border-green-700 bg-white text-gray-800 placeholder-gray-600" placeholder="..."/>
+        {% if field.name != 'website' %}
+          {% if field.errors %}
+            <div class="text-red-400 text-md m-0">
+              {% for error in field.errors %}
+                <p>{{ error }}</p>
+              {% endfor %}
+            </div>
+          {% endif %}
+          <label for="{{ field.id_for_label }}" class="text-white font-bold mb-4 text-lg">{{ field.label }}</label>
+          {% if field.name == 'message' %}
+            <textarea name="{{ field.name }}" class="w-full mt-2 p-4 rounded-xl border-2 border-green-700 bg-white text-gray-800 placeholder-gray-600" placeholder="Enter your message here..."></textarea>
+          {% else %}
+            <input name="{{ field.name }}"  class="w-full mt-2 p-4 rounded-xl border-2 border-green-700 bg-white text-gray-800 placeholder-gray-600" placeholder="..."/>
+          {% endif %}
         {% endif %}
       {% endfor %}
     </div>

@@ -24,6 +24,10 @@ def contact(request):
 
         # If form valid, clean the data for use
         if form.is_valid():
+            if form.cleaned_data.get('website'):
+                messages.success(request, 'Thank you for your message. We will reach out when possible.')
+                return redirect('contact')
+
             name = form.cleaned_data['name']
             email = form.cleaned_data['email']
             subject = form.cleaned_data['subject']
